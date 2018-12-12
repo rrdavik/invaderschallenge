@@ -1,1 +1,1 @@
-web: invaderschallenge
+web: go run main.go
