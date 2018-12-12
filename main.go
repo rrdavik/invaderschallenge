@@ -3,6 +3,7 @@ package main
 import (
     "encoding/json"
     "strconv"
+    "os"
     "log"
     "net/http"
     "github.com/gorilla/mux"
@@ -17,7 +18,7 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
-	
+
     router := mux.NewRouter()
     router.HandleFunc("/health",statusHandler).Methods("GET")
     router.HandleFunc("/name",contactHandler).Methods("POST")
