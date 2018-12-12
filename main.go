@@ -4,6 +4,7 @@ import (
     "encoding/json"
     "strconv"
     "os"
+    "fmt"
     "log"
     "net/http"
     "github.com/gorilla/mux"
@@ -18,7 +19,8 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	} else {
-		log.Println("port - "+port); 
+		fmt.Sprintf("<%s>", port)
+		log.Println("port - "+port)
 	}
 
     router := mux.NewRouter()
