@@ -17,6 +17,8 @@ func main() {
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
+	} else {
+		log.Println("port - "+port); 
 	}
 
     router := mux.NewRouter()
